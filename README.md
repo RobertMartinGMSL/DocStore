@@ -1,3 +1,3 @@
 DocStore
 
-Place to store documents and an easy way to share them
+A place for useful documents and an easy way to reference and share them
