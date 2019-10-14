@@ -66,6 +66,11 @@ Add-Computer -ComputerName MachineName -DomainName TESTGMSL -NewName NewMachineN
 ```
 Reset-ComputerMachinePassword -Credential TESTGMSL\your.name
 ```
+
+* Reset Trust Relationship (remotely from VM on domain)
+```
+Invoke-Command -ComputerName "Remote_VM_name" -ScriptBlock {Reset-ComputerMachinePassword}
+```
 ## Enivronment Variables
 * Get (list) Env variables
 ```
