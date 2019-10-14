@@ -86,7 +86,7 @@ Remove-Item env:EnvVarName
 ## IIS & Remote Mgmt
 * Install IIS (incl. mgmt tools)
 ```
-Install-WindowsFeature -name Web Server -IncludeManagementTools
+Install-WindowsFeature -name Web-Server -IncludeManagementTools
 ```
 * Install WinAuth for IIS
 ```
