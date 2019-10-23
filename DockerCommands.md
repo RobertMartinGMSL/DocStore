@@ -22,7 +22,7 @@ docker run image_name_or_id
 ```
 * Example with additional options (see below)
 ```
-docker run -d --name "myContainerName" --rm -p 1010:8080 -it my_image_or_id
+docker run -d --name "myContainerName" --rm -p 1010:8080 -t my_image_or_id
 ```
 ## Additional Options
 * Specify detached mode
