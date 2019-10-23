@@ -22,7 +22,7 @@ docker run image_name_or_id
 ```
 * Example with additional options (see below)
 ```
-docker run -d --name "myContainerName" -p 80:80 -v c:/temp/db.json:/data/db.json -t image_name+or_id
+docker run -d --name "myContainerName" -p 80:80 -v c:/temp/db.json:/data/db.json -t image_name_or_id
 ```
 ## Additional Options
 * Specify detached mode
