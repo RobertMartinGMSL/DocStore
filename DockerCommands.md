@@ -41,7 +41,7 @@ docker run -d --name "myContainerName" --rm -p 1010:8080 -it my_image_or_id
 ```
 * Specify port
 ```
--p local_port:container_port
+-p {outside_port}:{inside_port}
 ```
 * Specify image to use
 ```
