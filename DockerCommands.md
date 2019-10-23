@@ -8,7 +8,7 @@ docker images
 ```
 * Pull image
 ```
-docker pull <image name>
+docker pull image_name
 ```
 * Remove Image
 ```
@@ -22,7 +22,7 @@ docker run image_name_or_id
 ```
 * Example with additional options (see below)
 ```
-docker run -d --name "myContainerName" --rm -p 1010:8080 -t my_image_or_id
+docker run -d --name "myContainerName" -p 80:80 -v c:/temp/db.json:/data/db.json -t image_name+or_id
 ```
 ## Additional Options
 * Specify detached mode
