@@ -69,6 +69,10 @@ docker stop container_name_or_id
 ```
 docker rm container_name_or_id
 ```
+* Remove all containers (prune)
+```
+docker container prune --force
+```
 * Inspect container (view properties)
 ```
 docker inspect container_name_or_id
