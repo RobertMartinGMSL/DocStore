@@ -51,11 +51,11 @@ docker run -d --name "myContainerName" -p 80:80 -v c:/temp/db.json:/data/db.json
 ## Containers
 * View running containers
 ```
-docker container ls
+docker ps
 ```
 * View all containers
 ```
-docker container ls -a
+docker ps -a
 ```
 * Start container
 ```
@@ -77,7 +77,7 @@ docker container prune --force
 ```
 docker inspect container_name_or_id
 ```
-# Start container and attach terminal
+* Start container (run), attach volume (-v) and attach terminal (-w)
 ```
-docker run --rm -it -v $pwd.Path:/app -w /app container bash
+docker run --rm -it -v $pwd.Path:/app -w /app container_name bash
 ```
