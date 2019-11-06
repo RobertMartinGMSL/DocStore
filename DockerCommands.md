@@ -77,3 +77,7 @@ docker container prune --force
 ```
 docker inspect container_name_or_id
 ```
+# Start container and attach terminal
+```
+docker run --rm -it -v $pwd.Path:/app -w /app container bash
+```
