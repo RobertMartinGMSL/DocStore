@@ -79,5 +79,5 @@ docker inspect container_name_or_id
 ```
 * Start container (run), attach volume (-v) and attach terminal (-w)
 ```
-docker run --rm -it -v $pwd.Path:/app -w /app container_name bash
+docker run --rm -it -v local_folder:container_folder -w container_folder container_name bash
 ```
