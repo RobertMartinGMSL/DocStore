@@ -33,7 +33,7 @@ What if;
     * Can we set the "ProductionReleaseApproval" to pass if the "E2E-IntegrationCheck" component fails, but not if the "E2ETesterApproval" or "E2ETesterApproval" sections are not passing (approved)?
 1. Can we mark failed tests as "seen" (orange?) to confirm they have been dealt with, but are still failing?
 
-### Proposal
+### Suggested Proposal
 Assuming the above is answers we want from Engineering
 
 1. Move Integration Checks into own section, above "ProductionReleaseApproval"
