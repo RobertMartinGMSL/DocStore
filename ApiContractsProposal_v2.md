@@ -73,12 +73,12 @@ Please note that this document was approached as a _shopping list_ of requiremen
   
 ### Format of the API Contract
 1. Single source for all the APIs
-   * If possible, within an extising tool
+   * If possible, within an existing tool
      * e.g., GitHub? SwaggerUI?
      
-### Ownership & Responsability
-1. Producing & Testing the data should be the responsability of the API producer team
-1. Ownership & Responsability of producing & maintaining the UI needs to be decided
+### Ownership & Responsibility
+1. Producing & Testing the data should be the responsibility of the API producer team
+1. Ownership & Responsibility of producing & maintaining the UI needs to be decided
    * This will be a part of the system 
    * It should be given the appropriate time and effort to produce
    * This should be public facing for external clients user
