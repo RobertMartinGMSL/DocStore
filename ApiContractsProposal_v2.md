@@ -1,7 +1,8 @@
 # API Contracts Proposal
-This is a proposal for the API producers to publish information which details the API endpoints.  The users, consumers of an API, should be able to read this document to know the state it is currently in and the state it will change to.  This information should be as current as possible.  This document was created after discussion to clarify the requirement with selected Testers and POs.
+This is a proposal to create and maintain an API Contract.  The API Contract reflects the public and private interface of ESP. It needs to be current from both a planning and active development perspective.
 
-Please note that this document was approached as a _shopping list_ of requirements with the knowledge that parts of this may not possible due to cost or administrative overhead, but it is hoped the majority will be.
+The requirements for the API Contract were clarified after listening to Testers and POs, aiming to create a tool for the support of ESP development.  The requirements appear in the form of a _shopping list_. 
+
 
 ## Cross- Team Requirements
 
