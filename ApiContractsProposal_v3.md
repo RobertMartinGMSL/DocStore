@@ -34,11 +34,11 @@ Getting this information at the right time is also valuable. In general, it is m
 
 |State|Time|Reason for value|Total Value|
 |---|---|---|---|
-|In planning|in issues|pre dev feedback|Low|
-|In dev|On feature branch|Immediate feedback|Low|
+|In planning|in issues|pre dev feedback|Medium|
+|In dev|On feature branch|Immediate feedback|High|
 |In dev|WIP|Assist testing in WIP|High|
 |In dev|E2E|Assist testing in E2E|High|
-|Live|Prod|Mapping the live API|Medium|
+|Live|Prod|Mapping the live API|Low|
 
 ## Options
 
