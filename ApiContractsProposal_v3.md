@@ -23,7 +23,7 @@ There seem to be various sources of value to be gained by specifying and publish
 |System Success responses|`200`, `201`|Dev, PO & Test|Confirmation of successful request from the system|High|3|
 |System Error responses|`400`, `404`, `503`|Dev, PO & Test|Confirmation of unsuccessful request from the system|High|3|
 |System Error JSON responses|`missing counterparty`|Dev, PO & Test|Clarification of unsuccessful request from the system|High|3|
-|Infrastructure Errors responses|`429`|Tester & PO|Why a request was unsuccessful|Medium|5|
+|Infrastructure Errors responses|`429`|Tester & PO|Why a request was unsuccessful|Low|5|
 |Knowledge of API changes after planning completed||Dev, PO & Test||High|3|
 |Knowledge of API changes during implementation||Dev, PO & Test||High|3|
 |Knowledge of API changes after deployment (live)||Dev, PO & Test||Low|3|
