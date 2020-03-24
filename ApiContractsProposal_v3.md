@@ -12,24 +12,24 @@ The requirements for the API Contract were clarified after listening to Devs, Te
 
 There seem to be various sources of value to be gained by specifying and publishing API contracts for internal use:
 
-|Source of Value|Example|Who is it valuable to|Why is it valuable|Total Value|First Option That Solves|
+|Property|Example|Who is it valuable to|Why is it valuable|Total Value|First Option That Solves|
 |---|---|---|---|---|---|
-|API location (URL)|`https://mywebsite.com/`|All||High|3|
-|Endpoint location & Name|`/tradeLists`|All||High|3|
-|Request JSON|{"key": "value"}|All||High|3|
+|API location (URL)|`https://mywebsite.com/`|Dev, PO & Test||High|3|
+|Endpoint location & Name|`/tradeLists`|Dev, PO & Test||High|3|
+|Request JSON|{"key": "value"}|Dev, PO & Test||High|3|
 |Request Headers|{"header name":"header value"}|Tester & Dev||High|5|
-|Response JSON|{"key": "value"}|All||High|3|
+|Response JSON|{"key": "value"}|Dev, PO & Test||High|3|
 |Response Headers|{"header name":"header value"}|Tester & Dev||High|5|
-|Success responses|`200`, `201`|All||High|3|
-|Errors from web service|`400`, `404`, `503`|All||High|3|
+|Success responses|`200`, `201`|Dev, PO & Test||High|3|
+|Errors from web service|`400`, `404`, `503`|Dev, PO & Test||High|3|
 |Errors from infrastructure|`429`|Tester & PO||Medium|5|
-|Error JSON from web service|`missing counterparty`|All||High|3|
-|Knowledge of API changes after planning completed||All||High|3|
-|Knowledge of API changes during implementation||All||High|3|
-|Knowledge of API changes after deployment (live)||All||Low|3|
-|Which APIs are publically and/or internal exposed||All||Low|5|
+|Error JSON from web service|`missing counterparty`|Dev, PO & Test||High|3|
+|Knowledge of API changes after planning completed||Dev, PO & Test||High|3|
+|Knowledge of API changes during implementation||Dev, PO & Test||High|3|
+|Knowledge of API changes after deployment (live)||Dev, PO & Test||Low|3|
+|Which APIs are publically and/or internal exposed||Dev, PO & Test||Low|5|
 |API specs of sufficient quality to publish externally||PO||Low||
-|Viewable from a browser||All||High|2|
+|Viewable from a browser||Dev, PO & Test||High|2|
 |Alerts when the spec of an API changes|Email, slack, etc.|Subscribed||Medium||
 
 Getting this information at the right time is also valuable. In general, it is more useful the earlier we get the information.
