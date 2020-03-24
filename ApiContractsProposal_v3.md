@@ -71,19 +71,21 @@ All of (3) and potentially (4), then additional information from the API Gateway
 
 ## Considerations
 
-- (1) already exists, but is retrospective only
+- Option 1 already exists, but is retrospective only
   * Least work to implement
-- (2) is minimal work to add to (1)
+- Option 2 is minimal work to add to Option 1
   * All the pieces exist
-- (3) Requires manual & automated process, but gives most value
-  * partly implemented already in (1)
+- Option 3 Requires manual & automated process, but gives most value to the most roles
+  * partly implemented already in Option 1
   * partly process change
-- All but (1) require more buy-in
-- (4) requires somebody to own and maintain
+- All but Option 1 require more buy-in
+- Option 4 requires somebody to own and maintain
+- Option 5 requires integrating manualy integrating with AWS infrastructure
+  - Labour intensive
 
 ## Decision
 
-- Implement option (3).  This produces value for all parties, but requires the following
+- Implement Option 3.  This produces value for all parties, but requires the following
   * Team process to create OpenApi file before code is written
   * Project automation to update OpenApi file once code has started
   * Build automation to populate S3 bucket
