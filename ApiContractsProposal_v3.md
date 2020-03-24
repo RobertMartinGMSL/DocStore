@@ -12,7 +12,7 @@ The requirements for the API Contract were clarified after listening to Devs, Te
 
 There seem to be various sources of value to be gained by specifying and publishing API contracts for internal use:
 
-|Property|Example|Who is it valuable to|Why is it valuable|Value|First Option That Solves|
+|Properties|Example|Who is it valuable to|Why is it valuable|Value|First Option That Solves|
 |---|---|---|---|---|---|
 |API URL|`https://mywebsite.com/`|Dev, PO & Test|Identifying API URL, assuming remains constant|Low|3|
 |Endpoint location & Name|`/tradeLists`|Dev, PO & Test|Identifying API endpoints, assuming changable|High|3|
@@ -24,13 +24,15 @@ There seem to be various sources of value to be gained by specifying and publish
 |System Error responses|`400`, `404`, `503`|Dev, PO & Test|Confirmation of unsuccessful request from the system|High|3|
 |System Error JSON responses|`missing counterparty`|Dev, PO & Test|Clarification of unsuccessful request from the system|High|3|
 |Infrastructure Errors responses|`429`|Tester & PO|Why a request was unsuccessful|Low|5|
-|Knowledge of API changes after planning completed||Dev, PO & Test||High|3|
-|Knowledge of API changes during implementation||Dev, PO & Test||High|3|
-|Knowledge of API changes after deployment (live)||Dev, PO & Test||Low|3|
+|Planned API changes||Dev, PO & Test|Awareness of planned changes, supports shift left|High|3|
+|Implementing API changes||Dev, PO & Test|Awareness of ongoing development changes, supports shift left, cross-team integration|High|3|
+|Deployed API changes||Dev, PO & Test|Mapping the live API|Low|3|
 |Which APIs are publically and/or internal exposed||Dev, PO & Test||Low|5|
 |API specs of sufficient quality to publish externally||PO||Low||
 |Viewable from a browser||Dev, PO & Test||High|2|
 |Alerts when the spec of an API changes|Email, slack, etc.|Subscribed||Medium||
+
+NB: This is anticipated to outlive the current environments setup.
 
 Getting this information at the right time is also valuable. In general, it is more useful the earlier we get the information.
 
