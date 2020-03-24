@@ -1,5 +1,7 @@
 # API Contracts
-Initially internal, but may be expanded to support external usage when required
+Initially internal, but may be expanded to support external usage when required.
+
+An API contract is a document that is an agreement between different teams for how the API is designed. It contains properties such as  endpoint, request and response details and error handling.  The most common form of an API contract today is an OpenAPI Specification (formerly known as Swagger).
 
 Date: 2020-03-24
 
