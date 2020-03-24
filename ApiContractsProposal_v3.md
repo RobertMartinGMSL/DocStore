@@ -49,13 +49,13 @@ Getting this information at the right time is also valuable. In general, it is m
 
 ## Options
 
-### Retrospectivly generating local to project (1)
+### Retrospectively generating local to project (1)
 Instate nSwag in each project, built in Debug mode. To get the swagger for an API, you need to clone the repository, build the solution, and then open the JSON produced in Swagger UI. This provides the data for a specific service- it tells you the payloads it receives, sends, and error codes the service intentionally sends. It does not provide the common error codes that can be returned in production from other pieces of infrastructure (eg: 429 rejections from API gateway)
 
-### Retrospectivly Pulibshing to S3 bucket (2)
+### Retrospectively Pulibshing to S3 bucket (2)
 When a build is deployed to an environment from CodePipeline, the open API JSON should be copied to an S3 bucket for that environment named after the service. A simple website should be built on these JSON files, giving you a drop-down of which one to view for each environment. 
 
-### Proactive & Retrospectively Publishing to S3 bucket per API (3)
+### Proactively & Retrospectively Publishing to S3 bucket per API (3)
 Update the API Contract(s);
 1. After planning is finished
    * Create openapi file
