@@ -56,13 +56,12 @@ Instate nSwag in each project, built in Debug mode. To get the swagger for an AP
 When a build is deployed to an environment from CodePipeline, the open API JSON should be copied to an S3 bucket for that environment named after the service. A simple website should be built on these JSON files, giving you a drop-down of which one to view for each state. 
 
 ### Proactively & Retrospectively Publishing to S3 bucket per API (3)
-Update the API Contract(s);
+As well as (2), the OpenApi file is expected to be changed/updated in the following situations:
 1. After planning is finished
-   * Create openapi file
-1. During implementation
-   * When feature branches are created
-   * When feature branches are merged into dev (WIP)
-   * When master branch is updated (E2E)
+   * Create openapi file (manual process)
+1. During implementation (in development)
+   * When feature branches are merged in
+1. After deployment live
 
 ### Proactive & Retrospectively Publishing to S3 bucket for System (4)
 All of (3) then, run a tool to combine into single point of information.  This should be run whenever a new JSON file is deployed which combines all the JSON into a single file, describing the entire API surface for that environment.
