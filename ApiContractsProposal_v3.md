@@ -1,5 +1,5 @@
 # API Contracts
-Initially internal, but should be improved to be external when required
+Initially internal, but may be expanded to support external usage when required
 
 Date: 2020-03-24
 
