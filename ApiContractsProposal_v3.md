@@ -90,11 +90,11 @@ All of (3) and potentially (4), then additional information from the API Gateway
   * Project automation to update OpenApi file once code has started
   * Build automation to populate S3 bucket
 
-## Consequences
-
-- We get an internal website containing future, current and live states of the APIs
-- We do not get some sources of value. For example, the full URL, or the required Headers to get through API Gateway.
+## Decision Consequences
+- We get a website containing the planning, in development and deployed versions of the APIs.
+- We do not get some properties of the API in various states. 
+  - For example, the full URL, or the required Headers to get through API Gateway which would be from Option 5.
 - All services will need to be changed so they generate an nSwag JSON file on build. This is currently disabled because the 'output' directory in nSwag isn't working with our docker build. Task: Work out how to do this. Probably involves a developer and an Engineer (Scott).
 - Engineering (Scott) will need to get the build artifact from CodePipeline and copy it unmodified to an S3 bucket when the service is deployed to that environment. We end up with a JSON file per service.
 - Someone (a dev team?) should take over maintenance of the website already in `Gmsl.Esp.ApiSpecGeneration` and make it usable. Possibly move to a different repository? `SwaggerViewingWebsite` or something? May need further involvement from others- eg from Engineering to deploy this website everyone can see.
-- Start of API Contract to give to customers, including OPs.
+- Start of API Contract to give to customers, including Ops.
