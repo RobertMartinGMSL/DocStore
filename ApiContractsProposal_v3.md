@@ -1,4 +1,5 @@
-# API Contracts (Internal & External)
+# API Contracts
+Initially internal, but should be improved to be external qhen required
 
 Date: 2020-03-12
 
@@ -23,7 +24,7 @@ There seem to be various sources of value to be gained by specifying and publish
 |Error JSON from web service|`missing counterparty`|All||High|3|
 |Knowledge of API changes after planning completed||All||High|3|
 |Knowledge of API changes during implementation||All||High|3|
-|Knowledge of API changes after deployment (live)||All||High|3|
+|Knowledge of API changes after deployment (live)||All||Low|3|
 |Which APIs are publically and/or internal exposed||All||Low|5|
 |API specs of sufficient quality to publish externally||PO||Low||
 |Viewable from a browser||All||High|2|
@@ -55,8 +56,6 @@ Update the API Contract(s);
    * When feature branches are created
    * When feature branches are merged into dev (WIP)
    * When master branch is updated (E2E)
-1. After Implementation
-   * When published live
 
 ### Proactive & Retrospectively Publishing to S3 bucket for System (4)
 All of (3) then, run a tool to combine into single point of information.  This should be run whenever a new JSON file is deployed which combines all the JSON into a single file, describing the entire API surface for that environment.
@@ -79,9 +78,9 @@ All of (3) and potentially (4), then additional information from the API Gateway
 ## Decision
 
 - Implement option (3).  This produces value for all parties, but requires the following
-  * Process to create OpenApi file before code is written
-  * Automation to update OpenApi file once code has started
-  * Process to update OpenApi file after code is finished
+  * Team process to create OpenApi file before code is written
+  * Project automation to update OpenApi file once code has started
+  * Build automation to populate S3 bucket
 
 ## Consequences
 
@@ -90,4 +89,4 @@ All of (3) and potentially (4), then additional information from the API Gateway
 - All services will need to be changed so they generate an nSwag JSON file on build. This is currently disabled because the 'output' directory in nSwag isn't working with our docker build. Task: Work out how to do this. Probably involves a developer and an Engineer (Scott).
 - Engineering (Scott) will need to get the build artifact from CodePipeline and copy it unmodified to an S3 bucket when the service is deployed to that environment. We end up with a JSON file per service.
 - Someone (a dev team?) should take over maintenance of the website already in `Gmsl.Esp.ApiSpecGeneration` and make it usable. Possibly move to a different repository? `SwaggerViewingWebsite` or something? May need further involvement from others- eg from Engineering to deploy this website everyone can see.
-- Start of API COntract to give to customers, including OPs.
+- Start of API Contract to give to customers, including OPs.
