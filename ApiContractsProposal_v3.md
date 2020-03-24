@@ -66,7 +66,7 @@ As well as (2), the OpenApi file is expected to be changed/updated in the follow
 ### Proactive & Retrospectively Publishing to S3 bucket for System (4)
 All of (3) then, run a tool to combine into single point of information.  This should be run whenever a new JSON file is deployed which combines all the JSON into a single file, describing the entire API surface for that environment.
 
-### API Gateway Information (5)
+### Infrastructure Information (5)
 All of (3) and potentially (4), then additional information from the API Gateway, Load Balancer, etc. should be added to the combined JSON file, describing possible responses from other pieces of infrastructure (e.g. 504 Gateway Timeout and 429 Too Many Requests)
 
 ## Considerations
