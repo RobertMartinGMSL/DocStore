@@ -33,7 +33,7 @@ There seem to be various sources of value to be gained by specifying and publish
 |Which APIs are publically and/or internal exposed|Dev, PO & Test||Low|5|
 |API specs of sufficient quality to publish externally|PO||Low||
 |Viewable from a browser|Dev, PO & Test|Universally viewable, useful to everybody|High|2|
-|Awareness of API spec changes|Subscribed|Version control|High||
+|Awareness of API spec changes|Dev, PO & Test|Version control|High||
 
 NB: 
 - This is anticipated to outlive the current environments setup.
@@ -41,13 +41,11 @@ NB:
 
 Getting this information at the right time is also valuable. In general, it is more useful the earlier we get the information.
 
-|State|Time|Reason for value|Total Value|
+|State|Captured|Reason for value|Value|
 |---|---|---|---|
-|In planning|in issues|pre dev feedback|Medium|
-|In dev|On feature branch|Immediate feedback|High|
-|In dev|WIP|Assist testing in WIP|High|
-|In dev|E2E|Assist testing in E2E|High|
-|Live|Prod|Mapping the live API|Low|
+|Planning|Manually created openapi file|pre dev feedback|High|
+|In Development|Generated openapi file|Immediate feedback|High|
+|Deployed|Published openapi file|Mapping the live API|Low|
 
 ## Options
 
