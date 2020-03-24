@@ -49,13 +49,13 @@ Getting this information at the right time is also valuable. In general, it is m
 
 ## Options
 
-### Retrospectively generating local to project (1)
+### Option 1: Retrospectively generating local to project
 Instate nSwag in each project, built in Debug mode. To get the swagger for an API, you need to clone the repository, build the solution, and then open the JSON produced in Swagger UI. This provides the data for a specific service- it tells you the payloads it receives, sends, and error codes the service intentionally sends. It does not provide the common error codes that can be returned in production from other pieces of infrastructure (eg: 429 rejections from the Load Balancer)
 
-### Retrospectively Publishing to S3 bucket (2)
+### Option 2: Retrospectively Publishing to S3 bucket
 When a build is deployed to an environment from CodePipeline, the open API JSON should be copied to an S3 bucket for that environment named after the service. A simple website should be built on these JSON files, giving you a drop-down of which one to view for each state. 
 
-### Proactively & Retrospectively Publishing to S3 bucket per API (3)
+### Option 3: Proactively & Retrospectively Publishing to S3 bucket per API
 As well as (2), the OpenApi file is expected to be changed/updated in the following situations:
 1. After planning is finished
    * Create openapi file (manual process)
@@ -63,10 +63,10 @@ As well as (2), the OpenApi file is expected to be changed/updated in the follow
    * When feature branches are merged in
 1. After deployment live
 
-### Proactive & Retrospectively Publishing to S3 bucket for System (4)
+### Option 4: Proactive & Retrospectively Publishing to S3 bucket for System
 All of (3) then, run a tool to combine into single point of information.  This should be run whenever a new JSON file is deployed which combines all the JSON into a single file, describing the entire API surface for that environment.
 
-### Infrastructure Information (5)
+### Option 5: Infrastructure Information
 All of (3) and potentially (4), then additional information from the API Gateway, Load Balancer, etc. should be added to the combined JSON file, describing possible responses from other pieces of infrastructure (e.g. 504 Gateway Timeout and 429 Too Many Requests)
 
 ## Considerations
