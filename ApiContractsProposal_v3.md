@@ -12,14 +12,14 @@ The requirements for the API Contract were clarified after listening to Devs, Te
 
 There seem to be various sources of value to be gained by specifying and publishing API contracts for internal use:
 
-|Property|Example|Who is it valuable to|Why is it valuable|Total Value|First Option That Solves|
+|Property|Example|Who is it valuable to|Why is it valuable|Value|First Option That Solves|
 |---|---|---|---|---|---|
-|API location (URL)|`https://mywebsite.com/`|Dev, PO & Test||High|3|
-|Endpoint location & Name|`/tradeLists`|Dev, PO & Test||High|3|
-|Request JSON|{"key": "value"}|Dev, PO & Test||High|3|
-|Request Headers|{"header name":"header value"}|Tester & Dev||High|5|
-|Response JSON|{"key": "value"}|Dev, PO & Test||High|3|
-|Response Headers|{"header name":"header value"}|Tester & Dev||High|5|
+|API URL|`https://mywebsite.com/`|Dev, PO & Test|Identifying API URL, assuming remains constant|Low|3|
+|Endpoint location & Name|`/tradeLists`|Dev, PO & Test|Identifying API endpoints, assuming changable|High|3|
+|Request JSON|{"key": "value"}|Dev, PO & Test|Knowing details of what to send|High|3|
+|Request Headers|{"header name":"header value"}|Tester & Dev|Knowing details of what to send|High|5|
+|Response JSON|{"key": "value"}|Dev, PO & Test|Knowing details of what to receive|High|3|
+|Response Headers|{"header name":"header value"}|Tester & Dev|Knowing details of what to receive, correlation ID tracking|High|5|
 |Success responses|`200`, `201`|Dev, PO & Test||High|3|
 |Errors from web service|`400`, `404`, `503`|Dev, PO & Test||High|3|
 |Errors from infrastructure|`429`|Tester & PO||Medium|5|
