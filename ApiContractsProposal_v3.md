@@ -6,7 +6,7 @@ An API contract is a document that is an agreement between different teams for h
 Date: 2020-03-24
 
 ## Context
-This is a proposal to create and maintain an API Contract. The API Contract reflects the public and private interface of ESP. It needs to be current from both a planning and active development perspective.
+This is a proposal to create and maintain an API Contract(s). The API Contract reflects the public and private interface of ESP. It needs to be current from both a planning and active development perspective.
 
 The requirements for the API Contract were clarified after listening to Devs, Testers and POs; aiming to create a tool for the support of ESP development.
 
