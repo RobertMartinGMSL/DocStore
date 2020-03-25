@@ -14,7 +14,7 @@ There seem to be various sources of value to be gained by specifying and publish
 
 |Properties|Example|Who is it valuable to|Why is it valuable|Value|First Option That Solves|
 |---|---|---|---|---|---|
-|API URL|`https://mywebsite.com/`|Dev, PO & Test|Identifying API URL, assuming remains constant|Low|3|
+|API URL|`https://mywebsite.com/`|Dev, PO & Test|Identifying API URL, assuming remains constant|Low|5|
 |Endpoint location & Name|`/tradeLists`|Dev, PO & Test|Identifying API endpoints, assuming changable|High|3|
 |Request JSON|{"key": "value"}|Dev, PO & Test|Knowing details of what to send|High|3|
 |Request Headers|{"header name":"header value"}|Tester & Dev|Knowing details of what to send|High|5|
