@@ -25,8 +25,8 @@ There seem to be various sources of value to be gained by specifying and publish
 |System Error JSON responses|`missing counterparty`|Dev, PO & Test|Clarification of unsuccessful request from the system|High|
 |Infrastructure Errors responses|`429`|Tester & PO|Why a request was unsuccessful|Low|
 
-|State|Who is it valuable to|Why is it valuable|Value|First Option That Solves|
-|---|---|---|---|---|
+|State|Who is it valuable to|Why is it valuable|Value|
+|---|---|---|---|
 |Planned API changes|Dev, PO & Test|Awareness of planned changes, supports shift left, cross-team planning|High|
 |Implementing API changes|Dev, PO & Test|Awareness of ongoing development changes, supports shift left, cross-team integration|High|
 |Deployed API changes|Dev, PO & Test|Current state of the product|Low|
