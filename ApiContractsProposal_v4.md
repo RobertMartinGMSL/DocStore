@@ -96,11 +96,14 @@ Currently the definition of APIs only ends up defined at the end of the developm
 #### Part 2: Draft Contracts
 It would be useful for teams consuming APIs to know about upcoming new APIs and changes to existing APIs ahead of time. This allows them to prepare for the changes, take them into account during upcoming work and prioritise accordingly. This knowledge may provide opportunities for improvements to the system that would otherwise be unavailable. We should also consider publishing documentation that the consuming team can use to implement required changes early, the more accurate and specific this is, the lower the risk of rework. 
 
-Using a swagger file is very specific, and the team creating the API should prioritise design work first (where this does not increase the overall time taken) in order to increase the accuracy of this information. 
-To do this, hold a meeting involving at least 1 member of the consuming team, and go through your mock up of the API. If one team is ready but the other is not, delay this process until both teams are ready to look at it. If the producing team is ready and the consuming team is not, do not delay the actual work. Hold a design meeting as soon as the consuming team are ready.
+##### Producing a Swagger File
+Using a swagger file is very specific, and the team creating the API should prioritise design work first (where this does not increase the overall time taken) in order to increase the accuracy of this information. To do this, hold a meeting involving at least 1 member of the consuming team, and go through your mock up of the API. If one team is ready but the other is not, delay this process until both teams are ready to look at it. If the producing team is ready and the consuming team is not, do not delay the actual work. Hold a design meeting as soon as the consuming team are ready.
 
-For new APIs, the recommended artifact to produce a swagger document explaining the change. This allows the consuming team to produce more relible mocks during development as the file is highly specific and supported by tooling. Example requests and responses can also be helpful. This file should be committed in the `/Documentation` folder of the repository, and deleted once a similar document has been generated for the production environment (See Part 3). Dan and Paul have tried this process when creating the Balancing API, and have had positive results. Dan's approach was to first write a stub, use nSwag to generate a swagger file from it, and then tweak it manually in a meeting to improve its quality.
-For changes to existing APIs, the recommendation is to start a conversation with the consuming team during planning phase and find out what they need. Provide a mock up in whatever form seems best to use, and use it as a starting point for the conversation. For very small changes, producing any documentation at all may be overkill. Talk to the consuming team, find out what would be useful to them and how useful it is, and be prepared to try and do the design work required earlier rather than later in the process in order to improve the accuracy of this information.
+##### New API Endpoints
+The recommended artifact to produce is a swagger document explaining the change. This allows the consuming team to produce more relible mocks during development as the file is highly specific and supported by tooling. Example requests and responses can also be helpful. This file should be committed in the `/Documentation` folder of the repository, and deleted once a similar document has been generated for the production environment (See Part 3). This process has already been trialed between Condor (producing the API) and Ops Delivery (consuming the API) when creating the Balancing API, which had positive results.  Condor's approach was to first write a stub, use nSwag to generate a swagger file from it, and then tweak it manually in a meeting to improve its quality.  This was then reviewed by the Ops Delivery team.
+
+##### Changes to Existing API Endpoints
+The recommendation is to start a conversation with the consuming team during planning phase and find out what they need. Provide a mock up in whatever form seems best to use, and use it as a starting point for the conversation. For very small changes, producing any documentation at all may be overkill. Talk to the consuming team, find out what would be useful to them and how useful it is, and be prepared to try and do the design work required earlier rather than later in the process in order to improve the accuracy of this information.
 
 #### Part 3: Environment Documentation
 In order to clearly define what is in each environment, and to make to easier to explore the API surface as a whole, we should have some production documentation. This should be automatically generated from the package when a version is deployed to that environment in order to ensure that it always accurately reflects what is in that environment.
@@ -119,7 +122,7 @@ In order to make the documentation easy to access and read, there will be a webs
 1. Engineering will need to ensure this website is deployed through CI/CD, permissions, networking, filewalling, IP whitelisting, etc. Lots of work.
 
 ### Extension tasks:
-1) Tool to combine JSON files per service into a single JSON file for the whole environment.
-2) Tool to extend the JSON file produced from the code to include other errors from the infrastructure.
-3) Central place to publish "Draft" swagger documents
-4) Website on top of the central location for draft documents.
+1. Tool to combine JSON files per service into a single JSON file for the whole environment.
+1. Tool to extend the JSON file produced from the code to include other errors from the infrastructure.
+1. Central place to publish "Draft" swagger documents
+1. Website on top of the central location for draft documents.
