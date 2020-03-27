@@ -13,7 +13,7 @@ The requirements for the API Contract were clarified after listening to Devs, Te
 There seem to be various sources of value to be gained by specifying and publishing API contracts for internal use:
 
 |Properties|Example|Who is it valuable to|Why is it valuable|Value|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |API URL|`https://mywebsite.com/`|Dev, PO & Test|Identifying API URL, assuming remains constant|Low|
 |Endpoint location & Name|`/tradeLists`|Dev, PO & Test|Identifying API endpoints, assuming changable|High|
 |Request JSON|{"key": "value"}|Dev, PO & Test|Knowing details of what to send|High|
@@ -52,11 +52,20 @@ Getting this information at the right time is also valuable. In general, it is m
 
 #### Part 1: Usability
 With visual user interfaces, we generally understand that the design needs iteration. For a change which affects the UI, we typically go through the process resembling the following:
-1. Mock up. This can be done on paper, by an example, by creating a webpage that looks correct but doesn't work, or a working page- whatever is quickest. For small changes it may be fastest to just do it and show the PO. For brand new stuff paper is often a good idea.
-1. Test the look. Show it to a tester, a product owner, and a user of the software, and iterate on the mock up until it is as clear as possible.
-1. Implement. Try to implement the mock up so it works as required.
-1. Discover. During implementation we typically discover facts that weren't obvious on the mock up. "This box says ContractId and Location but the page is for a contract that can have multiple locations. Should we change this to a single "Locations"? Do we need a tab per location? Should the whole screen be per location?
-1. Acceptance. Once implemented we do another round of usability testing. Typically just the tester and PO.
+
+1. Mock up. 
+   - Paper example, non/part functional webpage, etc., whatever is quickest. 
+   - For small changes it may be fastest to just do it and show the PO. 
+   - For brand new stuff paper is often a good idea.
+1. Test the look. 
+   - Show it to a Tester, PO, end-user
+   - Iterate on the mock up until it is as clear as possible to all parties
+1. Implement. 
+   - Try to implement the mock up so it works as required.
+1. Discover. 
+   - During implementation we typically discover facts that weren't obvious on the mock up. "This box says ContractId and Location but the page is for a contract that can have multiple locations. Should we change this to a single "Locations"? Do we need a tab per location? Should the whole screen be per location?
+1. Acceptance. 
+   - Once implemented we do another round of usability testing. Typically just the tester and PO.
 1. Release.
 
 Currently the definition of APIs only ends up defined at the end of the development cycle. However, the API is an interface and we should consider going through the same process, with all the same remarks. For a brand new API, the following feels like a good process:
