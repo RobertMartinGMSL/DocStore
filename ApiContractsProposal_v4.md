@@ -63,21 +63,40 @@ With visual user interfaces, we generally understand that the design needs itera
 1. Implement. 
    - Try to implement the mock up so it works as required.
 1. Discover. 
-   - During implementation we typically discover facts that weren't obvious on the mock up. "This box says ContractId and Location but the page is for a contract that can have multiple locations. Should we change this to a single "Locations"? Do we need a tab per location? Should the whole screen be per location?
+   - During implementation we typically discover facts that weren't obvious on the mock up,i.e;
+     - "This box says ContractId and Location but the page is for a contract that can have multiple locations. 
+     - Should we change this to a single "Locations"? 
+     - Do we need a tab per location? 
+     - Should the whole screen be per location?
 1. Acceptance. 
    - Once implemented we do another round of usability testing. Typically just the tester and PO.
 1. Release.
 
 Currently the definition of APIs only ends up defined at the end of the development cycle. However, the API is an interface and we should consider going through the same process, with all the same remarks. For a brand new API, the following feels like a good process:
-1. Mock up. If it's a small tweak to the API, a remark in a case, slack, or a modified JSON file may be appropriate. For a brand new API, manually creating a swagger document may be best (See Part 2). Whatever is quickest.
-1. Test it. Show it to testers, PO and a user (the team consuming the API), and iterate on the mock.
-1. Implement. Try to implement the mock up so it works as required.
-1. Discover. During implementation we typically discover facts that weren't obvious on the mock up. "we need this extra field". "This attribute doesn't make sense at this level". Etc. In this case, it's probably worth informing the consuming team. API consumers need to do more work to handle interface changes than human users do.
-1. Acceptance. Once implemented we do another round of usability testing. Typically just the tester and PO (See Part 3).
+
+1. Mock up. 
+   - For small API tweaks, a remark in a case, slack, or a modified JSON file may be appropriate. 
+   - For a brand new API, manually creating a swagger document may be best (See Part 2). Whatever is quickest.
+1. Test it. 
+   - Show it to consuming teams tester, PO and end-user
+   - Iterate on the mock.
+1. Implement. 
+   - Try to implement the mock up so it works as required.
+1. Discover. 
+   - During implementation we typically discover facts that weren't obvious on the mock up, i.e;
+     - "we need this extra field". 
+     - "This attribute doesn't make sense at this level". Etc. 
+   - In this case, it's probably worth informing the consuming team. 
+     - API consumers need to do more work to handle interface changes than human users do.
+1. Acceptance. 
+   - Once implemented we do another round of usability testing. 
+   - Typically just the tester and PO (See Part 3).
 1. Release.
 
 #### Part 2: Draft Contracts
-It would be useful for teams consuming APIs to know about upcoming new APIs and changes to existing APIs ahead of time. This allows them to prepare for the changes, and take them into account during upcoming work. This knowledge may provide opportunities for improvements to the system that would otherwise be unavailable. As well as involving the consumer of an API earlier in the process (See Part 1), we should also look to publish documentation that the consuming team can use to implement required changes early. The more accurate and specific this is, the lower the risk of rework. Using a swagger file is very specific, and the team creating the API should prioritise design work first (where this does not increase the overall time taken) in order to increase the accuracy of this information. 
+It would be useful for teams consuming APIs to know about upcoming new APIs and changes to existing APIs ahead of time. This allows them to prepare for the changes, take them into account during upcoming work and prioritise accordingly. This knowledge may provide opportunities for improvements to the system that would otherwise be unavailable. We should also consider publishing documentation that the consuming team can use to implement required changes early, the more accurate and specific this is, the lower the risk of rework. 
+
+Using a swagger file is very specific, and the team creating the API should prioritise design work first (where this does not increase the overall time taken) in order to increase the accuracy of this information. 
 To do this, hold a meeting involving at least 1 member of the consuming team, and go through your mock up of the API. If one team is ready but the other is not, delay this process until both teams are ready to look at it. If the producing team is ready and the consuming team is not, do not delay the actual work. Hold a design meeting as soon as the consuming team are ready.
 
 For new APIs, the recommended artifact to produce a swagger document explaining the change. This allows the consuming team to produce more relible mocks during development as the file is highly specific and supported by tooling. Example requests and responses can also be helpful. This file should be committed in the `/Documentation` folder of the repository, and deleted once a similar document has been generated for the production environment (See Part 3). Dan and Paul have tried this process when creating the Balancing API, and have had positive results. Dan's approach was to first write a stub, use nSwag to generate a swagger file from it, and then tweak it manually in a meeting to improve its quality.
