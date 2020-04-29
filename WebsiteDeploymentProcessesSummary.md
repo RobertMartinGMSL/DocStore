@@ -79,3 +79,17 @@ This is a summary breakdown of the Website (OpsDel) team deployment processes
    - system integration of stable components (E2E)
    - ESP within AWS environment (WIP + E2E)
    - complete functionality happy paths
+
+### Security Testing
+- OWASP ZAP
+   - automatically run periodically on WIP
+   - HUD used when making major changes to pages
+   - plans for penetration (pen) testing to be done before we expose externally
+   
+### Browsers
+- currently only support Chrome (latest)
+  - all automation run against Chrome (latest)
+- fairly confident that React handles Chrome, FF and Edge
+- no current consideration outside Chrome, FF & Edge
+  - expecting this to be expanded to at least iOS/Safari once decision on mobile interface is made
+   
