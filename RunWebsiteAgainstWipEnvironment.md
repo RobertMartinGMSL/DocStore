@@ -1,6 +1,6 @@
 # Run Website locally against WIP environment
 
-1 . Add to `C:\Windows\System32\drivers\etc\hosts`
+1. Add to `C:\Windows\System32\drivers\etc\hosts`
    - `127.0.0.1 esp.awstest.gasops.co.uk`
    - Remember to remove when done, otherwise localhost will be pointing at WIP permanently
 1. Create dev environment file
