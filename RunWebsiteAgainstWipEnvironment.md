@@ -19,3 +19,4 @@
    - run `npm run start:dev`
 1. Open website against WIP environment
    - Open browser at URL `https://esp.awstest.gasops.co.uk`
+   - accept the self-asigned HTTPS certificate (usually under hidden "Advanced" button)
